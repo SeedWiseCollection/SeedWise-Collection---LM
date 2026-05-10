@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You for Your Purchase — SeedWise</title>
+<meta name="description" content="Your SeedWise ebook is ready. Here's how to start tonight.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1A1F2B">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark-base: #1A1F2B;
+    --dark-elevated: #2A2F42;
+    --dark-surface: #232839;
+    --almond-white: #F7F3E8;
+    --deep-teal: #1A5F5A;
+    --teal-mid: #2A7A73;
+    --horizon-orange: #E3655B;
+    --warm-gold: #C9A96E;
+    --growth-green: #49A078;
+    --text-on-dark: #EBE7DC;
+    --text-muted-dark: rgba(235,231,220,0.72);
+    --body-text: rgba(42, 47, 66, 0.72);
+    --body-light: rgba(42, 47, 66, 0.48);
+    --border-warm: rgba(26, 95, 90, 0.08);
+    --border-dark: rgba(235,231,220,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Serif 4', serif;
+    background: var(--almond-white);
+    color: var(--dark-elevated);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes checkPop {
+    0% { transform: scale(0); opacity: 0; }
+    60% { transform: scale(1.12); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* ═══════════════════════════
+     SECTION 1: CONFIRMATION
+     ═══════════════════════════ */
+  .confirmation {
+    background: var(--almond-white);
+    padding: 56px 28px 64px;
+    text-align: center;
+  }
+  .confirm-inner {
+    max-width: 580px;
+    margin: 0 auto;
+    animation: fadeUp 0.65s ease-out;
+  }
+
+  .ty-logo {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--deep-teal);
+    letter-spacing: -0.4px;
+    margin-bottom: 44px;
+    display: inline-block;
+    text-decoration: none;
+  }
+  .ty-logo span { font-weight: 400; color: var(--teal-mid); font-style: italic; }
+
+  .check-icon {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: rgba(26,95,90,0.06);
+    border: 2px solid var(--deep-teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 28px;
+    animation: checkPop 0.55s ease-out 0.2s both;
+  }
+  .check-icon svg {
+    width: 28px; height: 28px;
+    stroke: var(--deep-teal);
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .confirmation h1 {
+    font-size: clamp(1.7rem, 4.5vw, 2.3rem);
+    color: var(--dark-elevated);
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+  .confirmation .lead {
+    font-size: 1.05rem;
+    color: var(--body-text);
+    font-weight: 300;
+    max-width: 480px;
+    margin: 0 auto 44px;
+    line-height: 1.75;
+  }
+
+  /* Steps */
+  .steps { text-align: left; margin-bottom: 40px; }
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border-warm);
+  }
+  .step:last-child { border-bottom: none; }
+  .step-num {
+    flex-shrink: 0;
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background: rgba(26,95,90,0.06);
+    border: 1.5px solid var(--deep-teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--deep-teal);
+    margin-top: 2px;
+  }
+  .step-body {
+    font-size: 0.98rem;
+    color: var(--body-text);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+  .step-body strong { color: var(--dark-elevated); font-weight: 600; }
+
+  .fallback {
+    font-size: 0.82rem;
+    color: var(--body-light);
+    margin-bottom: 36px;
+    line-height: 1.6;
+  }
+  .fallback a { color: var(--deep-teal); text-decoration: none; font-weight: 500; }
+
+  .closing-quote {
+    border-top: 1px solid var(--border-warm);
+    padding-top: 28px;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  .closing-quote p {
+    font-size: 0.98rem;
+    font-style: italic;
+    color: var(--dark-elevated);
+    line-height: 1.75;
+    margin-bottom: 4px;
+    font-weight: 400;
+  }
+  .closing-quote p:last-child { color: var(--body-text); font-weight: 300; }
+
+  /* ═══════════════════════════
+     SECTION 2: UPGRADE BRIDGE
+     ═══════════════════════════ */
+  .upgrade {
+    background: var(--dark-elevated);
+    color: var(--text-on-dark);
+    padding: 80px 28px 88px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .upgrade::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -20%;
+    width: 140%; height: 200%;
+    background:
+      radial-gradient(ellipse at 25% 20%, rgba(26,95,90,0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 75% 80%, rgba(201,169,110,0.04) 0%, transparent 45%);
+    pointer-events: none;
+  }
+  .upgrade-inner {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .upgrade-eyebrow {
+    display: inline-block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--warm-gold);
+    border: 1px solid rgba(201,169,110,0.28);
+    border-radius: 30px;
+    padding: 6px 20px;
+    margin-bottom: 24px;
+    background: rgba(201,169,110,0.05);
+  }
+
+  .upgrade h2 {
+    font-size: clamp(1.5rem, 4vw, 2.1rem);
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  .upgrade h2 + h2 {
+    color: var(--growth-green);
+    margin-bottom: 36px;
+  }
+
+  /* Escalation */
+  .escalation { margin-bottom: 36px; }
+  .escalation p {
+    font-size: 1rem;
+    color: var(--text-muted-dark);
+    font-weight: 300;
+    line-height: 1.85;
+    margin-bottom: 10px;
+  }
+  .esc-line {
+    font-size: 1rem;
+    color: rgba(235,231,220,0.82);
+    font-weight: 400;
+    line-height: 1.85;
+    margin-bottom: 10px;
+  }
+  .esc-line:nth-child(3) { font-size: 1.03rem; }
+  .esc-line:nth-child(4) { font-size: 1.06rem; }
+  .esc-line:nth-child(5) { font-size: 1.1rem; color: #fff; font-weight: 500; }
+
+  .bridge-bold {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  /* Volume taglines */
+  .vol-list { margin-bottom: 40px; }
+  .vol-line {
+    font-size: 0.92rem;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-dark);
+    color: rgba(235,231,220,0.78);
+    font-weight: 300;
+  }
+  .vol-line:first-child { border-top: 1px solid var(--border-dark); }
+  .vol-line strong {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--growth-green);
+    font-weight: 600;
+  }
+  .vol-line em { font-style: normal; color: rgba(235,231,220,0.48); font-size: 0.82rem; }
+
+  /* Pricing block */
+  .pricing-block {
+    background: rgba(235,231,220,0.04);
+    border: 1px solid var(--border-dark);
+    border-radius: 14px;
+    padding: 32px 28px;
+    margin-bottom: 36px;
+  }
+  .pricing-original {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.82rem;
+    color: rgba(235,231,220,0.5);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .pricing-original span {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+  .pricing-yours {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.72rem;
+    color: var(--warm-gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .pricing-amount {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+  .pricing-desc {
+    font-size: 0.85rem;
+    color: rgba(235,231,220,0.6);
+    font-weight: 300;
+  }
+
+  /* CTA */
+  .upgrade-cta {
+    display: inline-block;
+    background: var(--horizon-orange);
+    color: #fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    padding: 18px 44px;
+    border-radius: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 24px rgba(227,101,91,0.25);
+    margin-bottom: 14px;
+    text-align: center;
+  }
+  .upgrade-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(227,101,91,0.4);
+  }
+  .no-rush {
+    font-size: 0.78rem;
+    font-style: italic;
+    color: rgba(235,231,220,0.42);
+    font-weight: 300;
+  }
+
+  /* ═══════════════════════════
+     SECTION 3: WARM CLOSING
+     ═══════════════════════════ */
+  .warm-close {
+    background: var(--almond-white);
+    padding: 64px 28px;
+    text-align: center;
+  }
+  .warm-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .warm-close h2 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    color: var(--dark-elevated);
+    margin-bottom: 14px;
+  }
+  .warm-close p {
+    font-size: 0.98rem;
+    color: var(--body-text);
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 12px;
+  }
+  .warm-tagline {
+    font-style: italic;
+    font-weight: 500 !important;
+    color: var(--dark-elevated) !important;
+    margin-top: 24px !important;
+    margin-bottom: 4px !important;
+  }
+  .signature {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--deep-teal);
+    margin-top: 20px;
+  }
+  .sig-role {
+    font-style: normal;
+    font-size: 0.75rem;
+    color: var(--body-light);
+    margin-top: 2px;
+  }
+
+  /* ═══════════════════════════
+     FOOTER
+     ═══════════════════════════ */
+  footer {
+    background: var(--dark-base);
+    border-top: 1px solid var(--border-dark);
+    padding: 28px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: rgba(235,231,220,0.45);
+  }
+  footer a {
+    color: rgba(235,231,220,0.55);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+  }
+  footer a:hover { color: var(--text-on-dark); }
+
+  /* ═══════════════════════════
+     RESPONSIVE
+     ═══════════════════════════ */
+  @media (max-width: 768px) {
+    .confirmation { padding: 44px 22px 52px; }
+    .upgrade { padding: 56px 22px 64px; }
+    .warm-close { padding: 48px 22px; }
+    .upgrade-cta { padding: 16px 32px; font-size: 0.85rem; width: 100%; }
+    .pricing-block { padding: 24px 20px; }
+    .step { gap: 14px; }
+  }
+
+  a:focus-visible { outline: 2px solid var(--warm-gold); outline-offset: 3px; }
+</style>
+</head>
+<body>
+
+<!-- SECTION 1: PURCHASE CONFIRMATION -->
+<section class="confirmation">
+  <div class="confirm-inner">
+    <a href="index.html" class="ty-logo">SeedWise <span>Collection</span></a>
+
+    <div class="check-icon">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    </div>
+
+    <h1>The Seeds Are Planted.</h1>
+    <p class="lead">You just gave your child something most parents never think to give — a financial head start that grows with them.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body"><strong>Check your inbox.</strong> In the next few minutes, you'll receive an email from Gumroad with your secure download link. Look for an email from <strong>no-reply@gumroad.com</strong> with your personalized PDF.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body"><strong>Check spam or promotions.</strong> If you don't see it within 5 minutes, check your spam or promotions folder. Drag the email to your Primary inbox so you never miss our follow-up tips.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body"><strong>Open it on any device.</strong> Your ebook works on any phone, tablet, or computer. You can also print the activity pages for hands-on sessions at the kitchen table.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body"><strong>Try one activity tonight.</strong> Every volume opens with a quick-start activity you can do in under five minutes. No preparation needed. Just a conversation, a question, or a simple game. That's all it takes to plant the first seed.</div>
+      </div>
+    </div>
+
+    <p class="fallback">If you don't receive your download email within 15 minutes, contact us at <a href="mailto:hello@seedwisecollection.com">hello@seedwisecollection.com</a> and we'll make it right immediately.</p>
+
+    <div class="closing-quote">
+      <p>Thank you for trusting SeedWise with your family's financial story.</p>
+      <p>The fact that you're starting this journey tells us everything we need to know about the kind of parent you are.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: UPGRADE BRIDGE -->
+<section class="upgrade">
+  <div class="upgrade-inner">
+    <span class="upgrade-eyebrow">The Complete Journey</span>
+
+    <h2>You Have One Volume.</h2>
+    <h2>The Full Roadmap Has Four.</h2>
+
+    <div class="escalation">
+      <p>The volume you just purchased is designed for one stage of your child's life. But their financial education doesn't stop at one stage.</p>
+      <p class="esc-line">The conversation you have at 4 is completely different from the one you'll need at 9.</p>
+      <p class="esc-line">The skills that work at 9 won't be enough at 13.</p>
+      <p class="esc-line">And by 16, they'll need an entirely different kind of preparation.</p>
+    </div>
+
+    <p class="bridge-bold">The Complete SeedWise Collection covers every stage — so you never have to guess what comes next.</p>
+
+    <div class="vol-list">
+      <div class="vol-line"><strong>First Seeds</strong> <em>(3–5)</em> — Where the language of money begins.</div>
+      <div class="vol-line"><strong>Growing Roots</strong> <em>(6–9)</em> — When saving, earning, and sharing take shape.</div>
+      <div class="vol-line"><strong>Wings to Decide</strong> <em>(10–14)</em> — When choices start carrying real weight.</div>
+      <div class="vol-line"><strong>Taking Flight</strong> <em>(15–18+)</em> — The confidence toolkit before they leave your roof.</div>
+    </div>
+
+    <div class="pricing-block">
+      <p class="pricing-original">Purchased individually: <span>$76</span></p>
+      <p class="pricing-yours">Because you're already part of the SeedWise family</p>
+      <p class="pricing-amount">$38</p>
+      <p class="pricing-desc">Three additional volumes. Every stage covered. Less than the price of two.</p>
+    </div>
+
+    <a href="https://seedwise.gumroad.com/l/dpsazt" class="upgrade-cta" data-gumroad-overlay-checkout="true">Complete Your Collection &mdash; $38</a>
+    <p class="no-rush">No rush. The volumes will be here whenever your family is ready for the next stage.</p>
+  </div>
+</section>
+
+<!-- SECTION 3: WARM CLOSING -->
+<section class="warm-close">
+  <div class="warm-inner">
+    <h2>What's Coming to Your Inbox</h2>
+    <p>Over the coming weeks, we'll send you age-specific tips, conversation starters, and practical activities that pair perfectly with your new guide.</p>
+    <p>No pressure, no pitches — just tools to keep the momentum going.</p>
+    <p class="warm-tagline">The seeds you plant today become the confidence they carry for a lifetime.</p>
+    <div class="signature">
+      — The SeedWise Family
+      <div class="sig-role">Parents first. Educators always.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <p style="margin-bottom:6px;">&copy; 2026 SeedWise Collection</p>
+  <p style="margin-bottom:6px;"><a href="mailto:hello@seedwisecollection.com" style="text-decoration:none;">hello@seedwisecollection.com</a></p>
+  <p><a href="privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms-of-service.html">Terms &amp; Conditions</a> &nbsp;&middot;&nbsp; <a href="cookie-policy.html">Cookies Policy</a></p>
+</footer>
+
+<!-- Gumroad Overlay Checkout -->
+<script src="https://gumroad.com/js/gumroad.js"></script>
+</body>
+</html>
