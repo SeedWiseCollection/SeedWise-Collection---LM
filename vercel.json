@@ -1,13 +1,9 @@
 {
+  "cleanUrls": true,
   "rewrites": [
     {
       "source": "/lpsales",
       "destination": "https://seed-wise-collection-lp-ventas-rdh3.vercel.app"
-    },
-    {
-      "source": "/images/:path*",
-      "destination": "https://seed-wise-collection-lp-ventas-rdh3.vercel.app/images/:path*"
     }
   ]
 }
-
